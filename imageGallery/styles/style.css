@@ -1,0 +1,61 @@
+
+#gridHolder ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+ul#gridViewImages {
+	left: 400px;
+	border-bottom: 1px ridge black;
+}
+
+	ul#gridViewImages>li {
+		border: 1px solid green;
+		padding: 10px;
+		display: inline-block;
+		text-align: center;
+	}
+
+ul#gridViewAlbums {
+	display: inline-block;
+	padding: 5px;
+	border: 1px groove black;
+}
+
+	ul#gridViewAlbums>li {
+		display: inline-block;
+	}
+
+.albums {
+	border: 1px solid #ff0022;
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px;
+	margin: 5px;
+}
+
+.albumAlbums {
+	display: block;
+}
+
+.images {
+	display: inline-block;
+	margin: 5px;
+}
+
+#focusImg {
+	display: inline-block;
+	margin-left: 30px;
+	vertical-align: middle;
+}
+
+h3 {
+	border-bottom: 1px solid #993399;
+	text-align: center;
+}
+
+h4, h3 {
+	margin: 0;
+}
+
+
