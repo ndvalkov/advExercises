@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>problem1</title>
+	<link rel="stylesheet" href="styles/style.css" />
+	<style type="text/css">
+		form {
+			/* Just to center the form on the page */
+			margin: 0 auto;
+			width: 150px;
+			height: 150px;
+			/* To see the outline of the form */
+			padding: 1em;
+			border: 1px solid #CCC;
+			border-radius: 1em;
+		}
+		
+		textarea, label, input {
+			width: 100px;
+		}
+		
+		form div + div {
+			margin-top: 1em;
+		}
+		
+		ul {
+			list-style-type: none;
+			padding: 0;
+		}
+		
+		.sliderElements {
+			width: 200px;
+			height: 200px;
+			text-align: center;
+			vertical-align: middle;
+			border: 1px solid #aa33dd;
+			display: inline-block;
+		}
+		
+		#holder2 {
+			margin: 10px;
+		}
+		
+		
+		
+	</style>
+	
+	
+</head>
+<body>
+	
+	<div id="holder2">
+		
+	</div>
+	
+	
+	
+	<div id="holder">
+		
+		<button id="buttonLeft">left</button>
+		<ul id="slider">
+			<li class="sliderElements">
+				<img id="imgSlide" src="http://placehold.it/50x50">
+			</li>
+			<li class="sliderElements">
+				<a id="linkSlide" href="http://dir.bg">some link</a>
+			</li>
+			<li class="sliderElements">
+				<form id="formSlide" action="/my-handling-form-page" method="post">
+					<div>
+						<label for="name">Name:</label>
+						<input type="text" id="name" />
+					</div>
+					<div>
+						<label for="mail">E-mail:</label>
+						<input type="email" id="mail" />
+					</div>
+					<div>
+						<label for="msg">Message:</label>
+						<textarea id="msg"></textarea>
+					</div>
+				</form>
+			</li>
+			<li class="sliderElements">
+				<textarea id="txtSlide" name="someTxtArea" id="ddd" cols="20" rows="10"></textarea>
+			</li>
+			<li class="sliderElements">
+				<button id="buttonSlide">Click</button>
+			</li>
+			<li class="sliderElements">
+				<select id="selectSlide">
+				  <option value="dd">dddd</option>
+				  <option value="dd">aaaa</option>
+				  <option value="dd">gggg</option>
+				  <option value="dd">hhhh</option>
+				</select> 
+			</li>
+		</ul>
+		<button id="buttonRight">right</button>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/proto-create-extend.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
+	
+	
+	<script type="text/javascript">
+		<!-- tests------------------------------ -->
+		var log = console.log;
+		
+		var slder = sliderController.getSlider("holder2");
+		slder.addSlide("imgSlide");
+		slder.addSlide("linkSlide");
+		slder.addSlide("formSlide");
+		slder.addSlide("txtSlide");
+		slder.addSlide("buttonSlide");
+		slder.addSlide("selectSlide");
+		slder.render();
+		<!-- slder.addSlide("selectSlide"); -->
+		
+		<!-- slder.render(); -->
+		log(slder);
+		
+		
+	</script>
+	
+</body>
+</html>

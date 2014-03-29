@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>Problem2_Prototypal</title>
+
+</head>
+<body>
+		
+	
+		
+		<script type="text/javascript" src="proto-create-extend.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		
+		<script type="text/javascript">
+			
+			<!-- tests-------------- -->
+			var log = console.log;
+			
+			var jo = schoolsRepository.addPerson("John", "Smith");
+			var john = schoolsRepository.addStudent("John", "Smith", 29, 5);
+			
+			var peter = schoolsRepository.addTeacher("Peter", "Jackson", 21, "geography");
+			
+			var cla = schoolsRepository.getClass("A", 2);
+			cla.addStudent(john);
+			cla.addTeacher(peter);
+			cla.addStudent(john);
+			<!-- cla.addStudent(john); -->
+			<!-- cla.addTeacher(peter); -->
+			
+			var school = schoolsRepository.getSchool("KirilMetodii", "Sofia")
+			school.addClass(cla);
+			
+			log(school);
+			log(cla);
+			log(john);
+			log(peter);
+			log(peter.introduce());
+			log(john.introduce());
+			
+		</script>
+</body>
+</html>

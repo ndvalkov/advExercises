@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>problem3</title>
+	
+	<style type="text/css">
+		
+		.sliderImgGallery {
+			border: 2px groove #111111;
+			text-align: center;
+			padding: 5px;
+		}
+		
+		#focusImg {
+			border: 3px solid #ffaa11;
+		}
+		
+		.sliderImg {
+			display: none;
+		}
+		
+		.sliderImg:nth-of-type(4) {
+			display: inline;
+		}
+		
+		.sliderImg:nth-of-type(5) {
+			display: inline;
+		}
+		
+		.sliderImg:nth-of-type(6) {
+			display: inline;
+			border: 3px solid #ffaa11;
+		}
+		
+		.sliderImg:nth-of-type(7) {
+			display: inline;
+		}
+		
+		.sliderImg:nth-of-type(8) {
+			display: inline;
+		}
+		
+		
+	</style>
+</head>
+
+<body>
+	
+	<div id="holder">
+		
+		
+		
+		
+	</div>
+	
+	<div id="holder2">
+		
+		<div class="sliderImgGallery">
+			<button class="sliderButton">previous</button>
+			<img class="sliderImg" src="http://placehold.it/50x50" alt="no image available" />
+			<img class="sliderImg" src="http://placehold.it/50x50" alt="no image available" />
+			<img id="focusImg" class="sliderImg" src="http://placehold.it/50x50" alt="no image available" />
+			<img class="sliderImg" src="http://placehold.it/50x50" alt="no image available" />
+			<img class="sliderImg" src="http://farm3.staticflickr.com/2087/2280928044_9b0f8fa05e.jpg" width="50" height="50" alt="no image available" />
+			<button class="sliderButton">next</button>
+		</div>
+		
+		
+	</div>
+	
+	
+	
+	
+	
+	<script type="text/javascript" src="proto-create-extend.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript">
+		<!-- tests------------------------------- -->
+		
+		var log = console.log;
+		
+		var sldr = controllerIS.createImageSlider("holder");
+		sldr.addImage("mosquito", "http://lorempixel.com/50/50", "http://lorempixel.com/100/100");
+		sldr.addImage("fly", "http://placehold.it/50x50", "http://placehold.it/100x100");
+		sldr.addImage("bug", "http://placehold.it/50x50", "http://placehold.it/100x100");
+		sldr.addImage("insect", "http://placehold.it/50x50", "http://placehold.it/100x100");
+		sldr.addImage("some random image", "http://lorempixel.com/50/50", "http://lorempixel.com/100/100");
+		sldr.addImage("insect", "http://placehold.it/50x50", "http://placehold.it/100x100");
+		sldr.addImage("insect", "http://placehold.it/50x50", "http://placehold.it/100x100");
+		sldr.addImage("insect", "http://placehold.it/50x50", "http://placehold.it/100x100");
+		
+		sldr.render();
+		
+		log(sldr);
+		
+	</script>
+</body>
+</html>

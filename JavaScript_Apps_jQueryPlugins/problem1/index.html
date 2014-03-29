@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery plugin</title>
+	
+	<style type="text/css">
+		#treeViewContainer{
+			border: 1px dashed #f00;
+		}
+		<!-- ----- -->
+		
+		
+		
+		
+		
+	</style>
+	
+</head>
+<body>
+	
+	<div id="treeViewContainer">
+		<ul class="treeList">
+			<li>
+				<a href="#">Item1</a>
+				<ul>
+					<li>
+						<a href="#">Item11</a>
+						<ul>
+							<li>
+								<a href="#">Item111</a>
+							</li>
+							<li>
+								<a href="#">Item112</a>
+							</li>
+							<li>
+								<a href="#">Item113</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Item12</a>
+						<ul>
+							<li>
+								<a href="#">Item111</a>
+							</li>
+							<li>
+								<a href="#">Item112</a>
+							</li>
+							<li>
+								<a href="#">Item113</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Item13</a>
+						<ul>
+							<li>
+								<a href="#">Item111</a>
+							</li>
+							<li>
+								<a href="#">Item112</a>
+							</li>
+							<li>
+								<a href="#">Item113</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Item2</a>
+				<ul>
+					<li>
+						<a href="#">Item21</a>
+						<ul>
+							<li>
+								<a href="#">Item111</a>
+							</li>
+							<li>
+								<a href="#">Item112</a>
+							</li>
+							<li>
+								<a href="#">Item113</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Item22</a>
+						<ul>
+							<li>
+								<a href="#">Item111</a>
+							</li>
+							<li>
+								<a href="#">Item112</a>
+							</li>
+							<li>
+								<a href="#">Item113</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Item23</a>
+						<ul>
+							<li>
+								<a href="#">Item111</a>
+							</li>
+							<li>
+								<a href="#">Item112</a>
+							</li>
+							<li>
+								<a href="#">Item113</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Item3</a>
+				<ul>
+					<li>
+						<a href="#">Item31</a>
+						<ul>
+							<li>
+								<a href="#">Item111</a>
+							</li>
+							<li>
+								<a href="#">Item112</a>
+							</li>
+							<li>
+								<a href="#">Item113</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Item32</a>
+						<ul>
+							<li>
+								<a href="#">Item111</a>
+							</li>
+							<li>
+								<a href="#">Item112</a>
+							</li>
+							<li>
+								<a href="#">Item113</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Item33</a>
+						<ul>
+							<li>
+								<a href="#">Item111</a>
+							</li>
+							<li>
+								<a href="#">Item112</a>
+							</li>
+							<li>
+								<a href="#">Item113</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Item4</a>
+				<ul>
+					<li>
+						<a href="#">Item41</a>
+						<ul>
+							<li>
+								<a href="#">Item111</a>
+							</li>
+							<li>
+								<a href="#">Item112</a>
+							</li>
+							<li>
+								<a href="#">Item113</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Item42</a>
+						<ul>
+							<li>
+								<a href="#">Item111</a>
+							</li>
+							<li>
+								<a href="#">Item112</a>
+							</li>
+							<li>
+								<a href="#">Item113</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Item43</a>
+						<ul>
+							<li>
+								<a href="#">Item111</a>
+							</li>
+							<li>
+								<a href="#">Item112</a>
+							</li>
+							<li>
+								<a href="#">Item113</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Item5</a>
+				<ul>
+					<li>
+						<a href="#">Item51</a>
+						<ul>
+							<li>
+								<a href="#">Item111</a>
+							</li>
+							<li>
+								<a href="#">Item112</a>
+							</li>
+							<li>
+								<a href="#">Item113</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Item52</a>
+						<ul>
+							<li>
+								<a href="#">Item111</a>
+							</li>
+							<li>
+								<a href="#">Item112</a>
+							</li>
+							<li>
+								<a href="#">Item113</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Item53</a>
+						<ul>
+							<li>
+								<a href="#">Item111</a>
+							</li>
+							<li>
+								<a href="#">Item112</a>
+							</li>
+							<li>
+								<a href="#">Item113</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	
+	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="jquery-extension.js"></script>
+	<script type="text/javascript">
+	
+	var log = console.log;
+	<!-- tests------- -->
+	
+	$(document).ready(
+		
+		$(("#treeViewContainer")).createTreeView()
+		
+		
+		
+	);
+	
+	
+	
+	
+	
+	
+	
+	</script>
+	
+</body>
+</html>

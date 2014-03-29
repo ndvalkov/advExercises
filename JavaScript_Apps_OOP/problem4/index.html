@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>problem4</title>
+	<style type="text/css">
+		
+		#holder {
+			display: block;
+			position:fixed;
+			top:0;
+		}
+		
+		#holder1 {
+			position:fixed;
+			top:200px;
+		}
+		
+		#favoriteSitesBar {
+			border: 2px groove #124590;
+			display: block;
+			height: 50px;
+			width: 100%;
+		}
+		
+		ul {
+			padding: 0;
+			list-style-type: none;
+		}
+		
+		.folderContainer {
+			float: left;
+			margin-left: 10px;
+			
+		}
+			
+			.folderContainer ul {
+				display: none;
+				margin-top:0;
+			}
+			
+			.folderContainer:hover ul {
+				display: block;
+			}
+			
+			.folderContainer h3 {
+				display: inline-block;
+				vertical-align: center;
+				margin-top:0;
+			}
+			
+		.images a {
+			margin-left: 5px;
+		}
+				
+			
+			
+			
+		
+	</style>
+</head>
+<body>
+	
+	
+	<div id="holder">
+		
+	</div>
+	
+	<div id="holder1">
+		
+		<div id="favoriteSitesBar">
+			
+			<div class="images">
+				<a href="http://www.dir.bg" target="_blank">Link1</a>
+				<a href="http://www.dir.bg" target="_blank">Link2</a>
+				<a href="http://www.dir.bg" target="_blank">Link3</a>
+			</div>
+		
+			<div class="folderContainer">
+				
+				<img src="folder-icon.png" width="25" height="25" alt="folder"/>
+				<h3>Title1</h3>
+				<ul>
+					
+					<li class="folderItem">
+						<a href="http://www.dir.bg" target="_blank">Link</a>
+					</li>
+					<li class="folderItem">
+						<a href="http://www.dir.bg" target="_blank">Link</a>
+					</li>
+					<li class="folderItem">
+						<a href="http://www.dir.bg" target="_blank">Link</a>
+					</li>
+					<li class="folderItem">
+						<a href="http://www.dir.bg" target="_blank">Link</a>
+					</li>
+					<li class="folderItem">
+						<a href="http://www.dir.bg" target="_blank">Link</a>
+					</li>
+					
+				</ul>
+			</div>
+			
+			<div class="folderContainer">
+				
+				<img src="folder-icon.png" width="25" height="25" alt="folder"/>
+				<h3>Title2</h3>
+				<ul>
+					
+					<li class="folderItem">
+						<a href="http://www.dir.bg" target="_blank">Link</a>
+					</li>
+					<li class="folderItem">
+						<a href="http://www.dir.bg" target="_blank">Link</a>
+					</li>
+					<li class="folderItem">
+						<a href="http://www.dir.bg" target="_blank">Link</a>
+					</li>
+					<li class="folderItem">
+						<a href="http://www.dir.bg" target="_blank">Link</a>
+					</li>
+					<li class="folderItem">
+						<a href="http://www.dir.bg" target="_blank">Link</a>
+					</li>
+					
+				</ul>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	
+	
+	
+	<script type="text/javascript" src="class-create-inherit.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript">
+		<!-- tests---------------------------- -->
+		
+		var log = console.log;
+		
+		var sbar = sitesBarController.createFSBar("holder");
+		
+		sbar.addURL("titleBAR1","http://dir.bg");
+		sbar.addURL("titleBAR2","http://dir.bg");
+		sbar.addURL("titleBAR3","http://dir.bg");
+		
+		var fol1 = sitesBarController.createFolder("favsites");
+		var url = sitesBarController.createUrl("url1", "http://dir.bg");
+		
+		fol1.addURL("url3", "http://dir.bg");
+		fol1.addURL("url5", "http://dir.bg");
+		fol1.addURL("url7", "http://dir.bg");
+		
+		<!-- fol1.render(); -->
+		
+		sbar.addFolder(fol1);
+		sbar.render();
+		
+		var fol2 = sitesBarController.createFolder("favsites2");
+		fol2.addURL("url55", "http://dir.bg");
+		fol2.addURL("url53", "http://dir.bg");
+		fol2.addURL("url71", "http://dir.bg");
+		
+		sbar.addFolder(fol2);
+		sbar.render();
+		
+		log(sbar);
+		log(fol1);
+		log(url);
+		
+	</script>
+	
+</body>
+</html>

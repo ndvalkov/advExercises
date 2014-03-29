@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>problem2</title>
+	<style type="text/css">
+		
+		
+		
+	</style>
+</head>
+<body>
+	
+	<!-- <button id="addHeader">add header</button>
+	<input id="headerInput" type="text" placeholder="item1, item2, item3..." />
+	<button id="addRow">add row</button>
+	<input id="rowInput" type="text" placeholder="item1, item2, item3..."/> -->
+	
+	<div id="container">
+		
+	</div>
+	
+	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/proto-create-extend.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
+	
+	<script type="text/javascript">
+		<!-- tests------------------------------ -->
+		
+		var log = console.log;
+		
+		var grid = gridViewController.createGridView("container");
+		var row = grid.addRow("Sofia, H. Botev, D");
+		grid.addRow("Sofia, KlimentO, B")
+		var row2 = grid.addRow("Plovdiv, K.Preslavski, D")
+		grid.addRow("Varna, Ivan Vazov, A");
+		grid.addHeader("city, school, class");
+		
+		
+		row.addRow("ivancho, 33, teacher")
+		row.addRow("mariika, 38, wife")
+		row.addRow("penka, 19, waitress")
+		var hdr = row.addHeader("person, age, occupation")
+		grid.render();
+		row.addRow("penka, 44, waitress");
+		grid.render();
+		
+		row2.addRow("person, age, occupation")
+		row2.addRow("Stanislav, 19, student")
+		row2.addRow("Kremena, 19, archer")
+		row2.addRow("Gogi, 13, gamer")
+		
+		grid.render();
+		
+		
+		log(grid);
+		log(row);
+		log(hdr);
+		log(row2);
+		
+		
+		
+	</script>
+	
+</body>
+</html>
