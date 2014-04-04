@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>crypto-chat</title>
+	<link rel="stylesheet" href="styles/style.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="scripts/class.js"></script>
+	<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha1.js"></script>
+	<script src="scripts/gibberish-aes.js"></script>
+	<script src="scripts/ui.js"></script>
+	<script src="scripts/http-requester.js"></script>
+	<script src="scripts/persister.js"></script>
+	<script src="scripts/controller.js"></script>
+</head>
+<body>
+	
+	<div id="chat-container">
+		
+	</div>
+	
+	
+	<script type="text/javascript">
+		<!-- tests--------------- -->
+		
+		
+		var chatPersister = persisters.getPersister("http://cryptochat.apphb.com/CryptoChatService.svc/");
+		
+		
+		
+		<!-- chatPersister.user.login(data, function(data) {
+				<!-- alert(JSON.stringify(data));
+			<!-- } -->
+			<!-- , function(arguments) { -->
+				<!-- alert(JSON.stringify(arguments)); -->
+			<!-- }) --> --> -->
+		
+		
+		<!-- register test----- -->
+		
+		var userData = {
+			"username": "Ivancho1000",
+			"password": "lost"
+		}
+		
+		var sessionId = "5224lmvCJuVorKbcEKxgDixoyyoxJbpRqOWbwTtTwMIKyYzExN";
+		
+		var authCode = CryptoJS.SHA1(userData.username + userData.password).toString();
+		console.log(authCode);
+		
+		
+		
+		
+		<!-- chatPersister.user.register(userData, function(data) { -->
+				<!-- alert(JSON.stringify(data)); -->
+			<!-- }, function(arguments) { -->
+				<!-- alert(JSON.stringify(arguments)); -->
+			<!-- } -->
+		<!-- ); -->
+		
+		<!-- chatPersister.user.login(userData, function(data) { -->
+			<!-- alert(JSON.stringify(data)); -->
+		<!-- }, function(arguments) { -->
+			<!-- alert(JSON.stringify(arguments)); -->
+		<!-- }		 -->
+		<!-- ) -->
+		
+		<!-- chatPersister.user.logout(function(data) { -->
+			<!-- alert(JSON.stringify(data)); -->
+		<!-- }, function(arguments) { -->
+			<!-- alert(JSON.stringify(arguments)); -->
+		<!-- } -->
+		
+		<!-- ) -->
+		
+		var controller = controllers.get();
+		controller.loadUI("#chat-container");
+		
+		<!-- chatPersister.chat.listUsers(function(data) { -->
+			<!-- alert(JSON.stringify(data)); -->
+		<!-- }, function(arguments) { -->
+			<!-- alert(JSON.stringify(arguments)); -->
+		<!-- } -->
+		
+		<!-- ); -->
+		
+		
+	</script>
+</body>
+</html>
