@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>GridView</title>
+	<link rel="stylesheet" href="styles/style.css" />
+	
+</head>
+<body>
+	
+	<span>Rebuilt from the local storage repository</span>
+	<div id="grid-container2">
+		
+	</div>
+	
+	<span>Original grid</span>
+	<div id="grid-container">
+		
+	</div>
+	
+	
+	
+	<section class="main-grid-view">
+		
+		<div class="grid-header">
+			<div class="grid-header-cell">
+				<span>Name</span>
+			</div>
+			<div class="grid-header-cell">
+				<span>Location</span>
+			</div>
+			<div class="grid-header-cell">
+				<span>Total Students</span>
+			</div>
+			<div class="grid-header-cell">
+				<span>Speciality</span>
+			</div>
+		</div>
+		
+		<div class="grid-row">
+			<div class="grid-row-cell">
+				<span>PMG</span>
+			</div>
+			<div class="grid-row-cell">
+				<span>Burgas</span>
+			</div>
+			<div class="grid-row-cell">
+				<span>400</span>
+			</div>
+			<div class="grid-row-cell">
+				<span>Mathematics</span>
+			</div>
+		</div>
+		
+		<div class="grid-row">
+			<div class="grid-row-cell">
+				<span>TUES</span>
+			</div>
+			<div class="grid-row-cell">
+				<span>Sofia</span>
+			</div>
+			<div class="grid-row-cell">
+				<span>500</span>
+			</div>
+			<div class="grid-row-cell">
+				<span>IT</span>
+			</div>
+		</div>
+		
+		<div class="grid-row">
+			<div class="grid-row-cell">
+				<span>Telerik Academy</span>
+			</div>
+			<div class="grid-row-cell">
+				<span>Sofia</span>
+			</div>
+			<div class="grid-row-cell">
+				<span>5000</span>
+			</div>
+			<div class="grid-row-cell">
+				<span>IT</span>
+			</div>
+		</div>
+		
+		<div class="grid-row">
+			<div class="grid-row-cell">
+				<span>ELS</span>
+			</div>
+			<div class="grid-row-cell">
+				<span>Burgas</span>
+			</div>
+			<div class="grid-row-cell">
+				<span>500</span>
+			</div>
+			<div class="grid-row-cell">
+				<span>English</span>
+			</div>
+		</div>
+		
+	</section>
+	
+	
+	
+	
+	
+	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/proto-create-extend.js"></script>
+	<script type="text/javascript" src="scripts/gridUI.js"></script>
+	<script type="text/javascript" src="scripts/gridController.js"></script>
+	
+	<script type="text/javascript">
+		<!-- tests------------------ -->
+		
+		/** var grid = gridController.getGridView("#grid-container");
+		
+		var hd = grid.addHeader("fff, fff, fff, fffff");
+		var rw = grid.addRow("dddd, dsdsd, sdsd, sdsd");
+		var rw2 = grid.addRow("dssdg, dghfghsdsd, sdsd, sdsd");
+		grid.addRow("dddd, dsdsd, sdsd, jjjjj");
+		grid.addRow("dddd, dsdkkkksd, skkdsd, aaaaaaaa");
+		
+		grid.addRow("nnnnnnnnnn, dghfghsdsd, sdsd, sdsd");
+		grid.buildGrid();
+		
+		var ngr = rw.getNestedGrid();
+		ngr.addHeader("niki, niki, niki, niki");
+		ngr.addRow("niki, niki, niki, niki");
+		ngr.addRow("niki, niki, niki, niki");
+		rw.getNestedGrid();
+		
+		grid.buildGrid();
+		var ngr2 = rw2.getNestedGrid();
+		ngr2.addHeader("niki, niki, niki, niki");
+		ngr2.addRow("niki, niki, niki, niki");
+		ngr2.addRow("niki, niki, niki, niki");
+		
+		
+		
+		grid.buildGrid();
+		console.log(grid);
+		**/
+		
+		var grid = gridController.getGridView("#grid-container");
+		grid.addHeader("name, location, courses, speciality");
+		var row1 = grid.addRow("AEG, Burgas, 4, English");
+		var ngrid = row1.getNestedGrid();
+		ngrid.addHeader("title, start date, students");
+		ngrid.addRow("English, 09.12, 23");
+		var row2 = ngrid.addRow("mathematics, 03.01, 24");
+		ngrid2 = row2.getNestedGrid();
+		ngrid2.addHeader("firsname, lastname, grade, mark");
+		ngrid2.addRow("Pencho, Ivanov, 4, 5");
+		ngrid2.addRow("Iordan, Kostov, 11, 2");
+		
+		grid.addRow("PMG, Sofia, 2, Math");
+		grid.addRow("OU, Sofia, 5, Physics");
+		grid.buildGrid();
+		
+		
+		/**var repo = gridController.getSchoolsRepository("Schools");
+		repo.save(grid);
+		var dd = repo.load();
+		console.log(dd);**/
+		
+		var repo = gridController.getSchoolsRepository("SchoolsRepo");
+		var data = grid.getGridViewData();
+		repo.save(data);
+		
+
+		var data = repo.load("SchoolsRepo");
+		
+		var newGrid = gridController.buildGridView("#grid-container2", data)
+		console.log(newGrid);
+		
+		newGrid.buildGrid();
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+.main-grid-view {
+	width: 80%;
+	height: 80%;
+	border: 2px dashed #00f;
+	font-size:16px;
+	padding: 5px;
+}
+	
+		.grid-header-cell, .grid-row-cell {
+			display: inline-block;
+			padding: 5px;
+			width: 12%;
+			border: 1px solid grey;
+			overflow: hidden;
+			border-left: none;
+		}
+		
+			.grid-header-cell {
+				font-weight: bold;
+			}
+		
+		.grid-header-cell:nth-child(1) {
+			border-left: 1px solid grey;
+		}
+		
+		.grid-row-cell:nth-child(1) {
+			border-left: 1px solid grey;
+		}
+		
+		.nested-grid-view .main-grid-view {
+			border: none;
+		}
